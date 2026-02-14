@@ -287,7 +287,7 @@ def demo_visualizations(scorecard, data, adli_breakdown, letci_breakdown, gap_df
         save_path='outputs/07_interactive_scorecard.html'
     )
 
-    print(f"\n✓ All visualizations saved to 'outputs/' directory")
+    print(f"\n[OK] All visualizations saved to 'outputs/' directory")
     print(f"\nGenerated files:")
     print(f"  - 01_radar_chart.png           : Category scores radar chart")
     print(f"  - 02_adli_breakdown.png        : ADLI dimensional breakdown")

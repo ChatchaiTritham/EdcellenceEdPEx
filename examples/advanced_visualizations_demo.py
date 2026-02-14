@@ -75,7 +75,7 @@ def demo_distribution_analysis(viz, data):
     )
     plt.close(fig)
 
-    print("✓ Generated: outputs/08_distribution_comparison.png")
+    print("[OK] Generated: outputs/08_distribution_comparison.png")
     print(f"  - Box plots showing quartiles and outliers")
     print(f"  - Violin plots showing density distributions")
     print(f"  - {len(score_distributions)} categories analyzed")
@@ -99,7 +99,7 @@ def demo_correlation_analysis(viz, data):
         )
         plt.close(fig)
 
-        print("✓ Generated: outputs/09_correlation_matrix.png")
+        print("[OK] Generated: outputs/09_correlation_matrix.png")
         print(f"  - Pearson correlation coefficients")
         print(f"  - Hierarchical clustering of categories")
         print(f"  - 5-year temporal data analyzed")
@@ -121,13 +121,13 @@ def demo_network_visualization(viz, data):
 
     # Define dependencies (from BEB-EdPEx framework)
     dependencies = [
-        (1, 2),  # Leadership → Strategy
-        (2, 5),  # Strategy → Workforce
-        (2, 6),  # Strategy → Operations
-        (5, 4),  # Workforce → Measurement
-        (6, 4),  # Operations → Measurement
-        (4, 7),  # Measurement → Results
-        (3, 7),  # Customers → Results
+        (1, 2),  # Leadership -> Strategy
+        (2, 5),  # Strategy -> Workforce
+        (2, 6),  # Strategy -> Operations
+        (5, 4),  # Workforce -> Measurement
+        (6, 4),  # Operations -> Measurement
+        (4, 7),  # Measurement -> Results
+        (3, 7),  # Customers -> Results
     ]
 
     category_names = {
@@ -144,7 +144,7 @@ def demo_network_visualization(viz, data):
     )
     plt.close(fig)
 
-    print("✓ Generated: outputs/10_network_diagram.png")
+    print("[OK] Generated: outputs/10_network_diagram.png")
     print(f"  - {len(category_scores)} categories as nodes")
     print(f"  - {len(dependencies)} dependency edges")
     print(f"  - Node size proportional to score")
@@ -165,8 +165,8 @@ def demo_sunburst_chart(viz, data):
         save_path='outputs/11_sunburst_hierarchy.html'
     )
 
-    print("✓ Generated: outputs/11_sunburst_hierarchy.html")
-    print(f"  - 3-level hierarchy (Organization → Categories → Items)")
+    print("[OK] Generated: outputs/11_sunburst_hierarchy.html")
+    print(f"  - 3-level hierarchy (Organization -> Categories -> Items)")
     print(f"  - Interactive drill-down capability")
     print(f"  - Color-coded by score")
     print(f"  - Open in browser for interactive exploration")
@@ -196,7 +196,7 @@ def demo_sankey_diagram(viz, data):
         save_path='outputs/12_sankey_flow.html'
     )
 
-    print("✓ Generated: outputs/12_sankey_flow.html")
+    print("[OK] Generated: outputs/12_sankey_flow.html")
     print(f"  - 7 categories flowing to overall score")
     print(f"  - Flow width proportional to contribution")
     print(f"  - Interactive hover for details")
@@ -228,7 +228,7 @@ def demo_temporal_decomposition(viz, data):
             )
             plt.close(fig)
 
-        print("✓ Generated: outputs/13_decomposition_cat[1-3].png")
+        print("[OK] Generated: outputs/13_decomposition_cat[1-3].png")
         print(f"  - Original series + Trend + Seasonal + Residuals")
         print(f"  - Moving average trend estimation")
         print(f"  - 3 categories analyzed (5-year data)")
@@ -270,7 +270,7 @@ def demo_3d_scatter(viz, data):
         save_path='outputs/14_3d_scatter_adli.html'
     )
 
-    print("✓ Generated: outputs/14_3d_scatter_adli.html")
+    print("[OK] Generated: outputs/14_3d_scatter_adli.html")
     print(f"  - {len(df)} data points (category items)")
     print(f"  - 3D coordinates: Approach, Deployment, Learning")
     print(f"  - Color-coded by overall score")
@@ -304,7 +304,7 @@ def demo_statistical_summary(viz, data):
     )
     plt.close(fig)
 
-    print("✓ Generated: outputs/15_statistical_summary.png")
+    print("[OK] Generated: outputs/15_statistical_summary.png")
     print(f"  - Mean scores with 95% confidence intervals")
     print(f"  - Coefficient of variation analysis")
     print(f"  - Min-Max ranges")
@@ -348,7 +348,7 @@ def demo_parallel_coordinates(viz, data):
         save_path='outputs/16_parallel_coordinates.html'
     )
 
-    print("✓ Generated: outputs/16_parallel_coordinates.html")
+    print("[OK] Generated: outputs/16_parallel_coordinates.html")
     print(f"  - 7 dimensions visualized simultaneously")
     print(f"  - Interactive filtering and selection")
     print(f"  - Color-coded by overall performance")
@@ -406,11 +406,11 @@ def main():
     # Load data
     print("\nLoading sample data...")
     data = load_sample_data()
-    print(f"✓ Loaded data for {data['organization']['name']}")
+    print(f"[OK] Loaded data for {data['organization']['name']}")
 
     # Initialize visualizer
     viz = AdvancedVisualizer()
-    print("✓ Advanced visualizer initialized")
+    print("[OK] Advanced visualizer initialized")
 
     # Run demonstrations
     demo_distribution_analysis(viz, data)

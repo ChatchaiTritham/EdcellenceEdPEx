@@ -40,7 +40,8 @@ venv.bak/
 
 # Jupyter Notebook
 .ipynb_checkpoints
-*.ipynb
+# NOTE: Notebooks are now included in the repository for publication
+# *.ipynb
 
 # pytest
 .pytest_cache/
