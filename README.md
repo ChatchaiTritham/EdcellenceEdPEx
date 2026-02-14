@@ -343,6 +343,7 @@ Rajamangala University of Technology Krungthep, Thailand
 **Chattabhorn Tritham** (Co-Author & Software Engineer)
 Thammasat School of Engineering (TSE)
 Thammasat University, Thailand
+📧 memodia@live.com
 🆔 ORCID: [0009-0003-2408-7374](https://orcid.org/0009-0003-2408-7374)
 
 ### Contributions
