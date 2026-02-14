@@ -17,7 +17,9 @@
 - **ADLI Scoring Algorithm** - Process categories assessment (Approach-Deployment-Learning-Integration)
 - **LeTCI Scoring Algorithm** - Results category assessment (Levels-Trends-Comparisons-Integration)
 - **Automated Performance Evaluation** - 69% reduction in assessment cycle duration
-- **38 Publication-Quality Visualizations** - 300 DPI static charts + interactive HTML visualizations
+- **53 Professional Visualizations** - 28 static charts (300 DPI PNG) + 10 interactive dashboards (HTML) + 15 manuscript figures
+- **Interactive Dashboards** - Plotly-powered HTML visualizations for exploratory analysis (no internet required)
+- **Publication-Ready Figures** - 15 IEEE ACCESS-compliant figures (300 DPI, 4.5 MB total)
 - **Comprehensive Testing** - 32 unit tests with 96.9% pass rate
 - **Empirical Validation** - Proven effectiveness across 24 organizational units
 
@@ -29,6 +31,7 @@
 - [Quick Start](#quick-start)
 - [Features](#features)
 - [Documentation](#documentation)
+- [Visualizations](#visualizations)
 - [Empirical Validation](#empirical-validation)
 - [Citation](#citation)
 - [License](#license)
@@ -248,6 +251,290 @@ print(f"Integration Health Index: {ihi:.3f}")
 
 ---
 
+## Visualizations
+
+The framework generates **38+ high-quality visualizations** for comprehensive performance analysis, including static charts (PNG, 300 DPI) and interactive dashboards (HTML). All visualizations are automatically generated and saved to the `outputs/` directory.
+
+### Overview
+
+| Category | Count | Format | Location | Purpose |
+|----------|-------|--------|----------|---------|
+| **Static Charts** | 28 files | PNG (300 DPI) | `outputs/*.png` | Publication-quality figures |
+| **Interactive Dashboards** | 10 files | HTML (Plotly) | `outputs/*.html` | Exploratory analysis |
+| **Manuscript Figures** | 15 files | PNG (300 DPI) | `manuscript_figures/*.png` | IEEE ACCESS submission |
+| **Total** | **53 files** | Mixed | Multiple | Complete analytics suite |
+
+### How to Generate Visualizations
+
+**Method 1: Run Demo Scripts**
+
+```bash
+# Generate 16 core visualizations (6 PNG + 10 HTML)
+python examples/complete_demo.py
+
+# Generate 11 advanced visualizations (8 PNG + 3 HTML)
+python examples/advanced_visualizations_demo.py
+```
+
+**Method 2: Run Jupyter Notebooks**
+
+```bash
+# Generate 9 visualizations (8 PNG + 1 HTML)
+jupyter notebook notebooks/01_Framework_Complete_Demo.ipynb
+
+# Generate 9 visualizations (6 PNG + 3 HTML)
+jupyter notebook notebooks/02_Advanced_Visualizations.ipynb
+```
+
+**Method 3: Programmatic Generation**
+
+```python
+from src.algorithms.organizational_scoring import OrganizationalScorer
+from src.visualizations.scoring_visualizer import ScoringVisualizer
+import json
+
+# Load data
+with open('data/sample/organizational_data.json', 'r') as f:
+    data = json.load(f)
+
+# Initialize
+scorer = OrganizationalScorer()
+viz = ScoringVisualizer()
+
+# Generate specific visualization
+viz.plot_radar_chart(category_scores, save_path='outputs/my_radar.png')
+viz.plot_interactive_scorecard(category_scores, save_path='outputs/my_scorecard.html')
+```
+
+---
+
+### Static Visualizations (28 PNG Files)
+
+All PNG files are generated at **300 DPI** for publication quality.
+
+#### Core Framework Visualizations (from `complete_demo.py`)
+
+| File | Dimensions | Description |
+|------|------------|-------------|
+| `01_radar_chart.png` | 800x800 | Seven-category performance radar chart |
+| `02_adli_breakdown.png` | 1000x600 | ADLI scoring breakdown (30-30-20-20 weights) |
+| `03_letci_breakdown.png` | 1000x600 | LeTCI scoring breakdown (35-25-25-15 weights) |
+| `04_gap_heatmap.png` | 1000x800 | Performance gap analysis heatmap |
+| `05_priority_matrix.png` | 1000x800 | Improvement priority matrix (Impact vs Effort) |
+| `06_3d_evolution.png` | 1200x900 | 3D surface plot of category evolution |
+
+#### Advanced Analytics Visualizations (from `advanced_visualizations_demo.py`)
+
+| File | Dimensions | Description |
+|------|------------|-------------|
+| `08_distribution_comparison.png` | 1200x800 | Box-violin plots of category score distributions |
+| `09_correlation_matrix.png` | 1000x1000 | Pearson correlation matrix (7x7 categories) |
+| `10_network_diagram.png` | 1200x1200 | BEB-EdPEx category dependency network |
+| `13_decomposition_cat1.png` | 1400x800 | Temporal decomposition - Leadership (trend/seasonal/residual) |
+| `13_decomposition_cat2.png` | 1400x800 | Temporal decomposition - Strategy |
+| `13_decomposition_cat3.png` | 1400x800 | Temporal decomposition - Customers |
+| `15_statistical_summary.png` | 1200x1000 | Statistical summary with 95% confidence intervals |
+
+#### Jupyter Notebook Visualizations
+
+**From Notebook 01 (Framework Demo):**
+
+| File | Description |
+|------|-------------|
+| `nb_01_adli.png` | ADLI dimension breakdown |
+| `nb_02_letci.png` | LeTCI dimension breakdown |
+| `nb_03_radar.png` | Category performance radar |
+| `nb_04_gap_heatmap.png` | Gap analysis heatmap |
+| `nb_05_priority_matrix.png` | Priority matrix |
+| `nb_06_3d_surface.png` | 3D evolution surface |
+| `nb_08_trends.png` | 5-year performance trends (2020-2025) |
+| `nb_09_validation.png` | Empirical validation results |
+
+**From Notebook 02 (Advanced Visualizations):**
+
+| File | Description |
+|------|-------------|
+| `adv_nb_01_distribution.png` | Score distributions |
+| `adv_nb_02_correlation.png` | Correlation matrix |
+| `adv_nb_03_network.png` | Dependency network |
+| `adv_nb_06_decomp_cat1.png` | Temporal decomposition - Category 1 |
+| `adv_nb_06_decomp_cat2.png` | Temporal decomposition - Category 2 |
+| `adv_nb_06_decomp_cat3.png` | Temporal decomposition - Category 3 |
+| `adv_nb_08_stats_summary.png` | Statistical summary |
+
+---
+
+### Interactive Visualizations (10 HTML Files)
+
+Interactive dashboards built with **Plotly.js** for exploratory analysis. All files are standalone HTML that work offline.
+
+#### Core Interactive Dashboards (from `complete_demo.py`)
+
+| File | Size | Features | Description |
+|------|------|----------|-------------|
+| `07_interactive_scorecard.html` | ~500 KB | Hover, zoom, pan | Interactive category scorecard with drill-down |
+| `11_sunburst_hierarchy.html` | ~400 KB | Click, zoom | Hierarchical sunburst chart (7 categories → items) |
+| `12_sankey_flow.html` | ~350 KB | Hover | Category flow diagram showing relationships |
+| `14_3d_scatter_adli.html` | ~600 KB | Rotate, zoom | 3D ADLI space exploration (A-D-L axes) |
+| `16_parallel_coordinates.html` | ~450 KB | Brush, filter | Parallel coordinates for multi-dimensional analysis |
+
+#### Advanced Interactive Dashboards (from `advanced_visualizations_demo.py`)
+
+| File | Features | Description |
+|------|----------|-------------|
+| `adv_nb_04_sunburst.html` | Click, zoom | Hierarchical category breakdown |
+| `adv_nb_05_sankey.html` | Hover | Flow relationships across categories |
+| `adv_nb_07_3d_scatter.html` | Rotate, zoom | 3D scatter plot in ADLI space |
+| `adv_nb_09_parallel_coords.html` | Brush, filter | Multi-dimensional parallel coordinates |
+
+#### Jupyter Notebook Interactive
+
+| File | Description |
+|------|-------------|
+| `nb_07_interactive_scorecard.html` | Interactive scorecard from Notebook 01 |
+
+**Usage Example:**
+```bash
+# Open any HTML file in browser
+start outputs/07_interactive_scorecard.html  # Windows
+open outputs/07_interactive_scorecard.html   # Mac
+xdg-open outputs/07_interactive_scorecard.html  # Linux
+```
+
+---
+
+### Manuscript Figures (15 Publication-Ready PNG Files)
+
+**Location:** `manuscript_figures/`
+**Format:** PNG, 300 DPI
+**Total Size:** 4.5 MB
+**Purpose:** IEEE ACCESS journal submission
+
+| Figure | File | Size | Description |
+|--------|------|------|-------------|
+| **Fig 1** | `Fig1_BEB-EdPEx_Category_Performance_Radar.png` | 522 KB | Organizational performance radar (7 categories) |
+| **Fig 2** | `Fig2_ADLI_Process_Scoring_Breakdown.png` | 78 KB | ADLI dimension analysis (30-30-20-20) |
+| **Fig 3** | `Fig3_LeTCI_Results_Scoring_Breakdown.png` | 81 KB | LeTCI dimension analysis (35-25-25-15) |
+| **Fig 4** | `Fig4_Performance_Gap_Analysis_Heatmap.png` | 179 KB | Gap analysis heatmap (current vs target) |
+| **Fig 5** | `Fig5_Improvement_Priority_Matrix.png` | 222 KB | Priority matrix (impact vs effort) |
+| **Fig 6** | `Fig6_Five_Year_Performance_Trends_2020_2025.png` | 345 KB | 5-year trend analysis (2020-2025) |
+| **Fig 7** | `Fig7_Three_Dimensional_Category_Evolution.png` | 644 KB | 3D evolution surface plot |
+| **Fig 8** | `Fig8_Category_Score_Distributions_BoxViolin.png` | 310 KB | Distribution analysis (box-violin plots) |
+| **Fig 9** | `Fig9_Category_Performance_Correlation_Matrix.png` | 162 KB | Correlation matrix (7x7 heatmap) |
+| **Fig 10** | `Fig10_BEB_EdPEx_Category_Dependency_Network.png` | 395 KB | Network diagram (category dependencies) |
+| **Fig 11** | `Fig11_Temporal_Decomposition_Leadership.png` | 299 KB | Time series decomposition - Leadership |
+| **Fig 12** | `Fig12_Temporal_Decomposition_Strategy.png` | 310 KB | Time series decomposition - Strategy |
+| **Fig 13** | `Fig13_Temporal_Decomposition_Customers.png` | 297 KB | Time series decomposition - Customers |
+| **Fig 14** | `Fig14_Statistical_Summary_95CI.png` | 490 KB | Statistical summary with 95% CI |
+| **Fig 15** | `Fig15_Empirical_Validation_Results.png` | 162 KB | Empirical validation (n=24 units) |
+
+**Complete figure captions:** See [`MANUSCRIPT_FIGURES_README.md`](manuscript_figures/MANUSCRIPT_FIGURES_README.md)
+
+---
+
+### Visualization Categories & Use Cases
+
+#### 1. Performance Assessment
+- **Radar Chart** - Overall category performance at a glance
+- **ADLI/LeTCI Breakdown** - Detailed dimension analysis
+- **Statistical Summary** - Quantitative metrics with confidence intervals
+
+#### 2. Gap Analysis & Planning
+- **Gap Heatmap** - Identify underperforming areas
+- **Priority Matrix** - Prioritize improvement initiatives
+- **Trend Analysis** - Track historical performance
+
+#### 3. Relationship Analysis
+- **Correlation Matrix** - Understand category interdependencies
+- **Network Diagram** - Visualize systemic relationships
+- **Sankey Flow** - Track performance flow across categories
+
+#### 4. Advanced Analytics
+- **3D Visualizations** - Explore multi-dimensional performance space
+- **Temporal Decomposition** - Separate trend, seasonal, and noise components
+- **Parallel Coordinates** - Multi-dimensional data exploration
+- **Distribution Analysis** - Statistical distribution comparison
+
+#### 5. Interactive Exploration
+- **Interactive Scorecard** - Drill-down into category details
+- **Sunburst Hierarchy** - Navigate category-item hierarchy
+- **3D Scatter** - Rotate and explore ADLI/LeTCI space
+
+---
+
+### Customization Options
+
+All visualizations support extensive customization:
+
+```python
+from src.visualizations.scoring_visualizer import ScoringVisualizer
+
+viz = ScoringVisualizer()
+
+# Customize colors
+viz.plot_radar_chart(
+    scores,
+    colors='viridis',  # Color scheme
+    alpha=0.7,         # Transparency
+    save_path='custom_radar.png'
+)
+
+# Customize dimensions
+viz.plot_gap_heatmap(
+    gap_data,
+    figsize=(12, 10),   # Figure size
+    dpi=300,            # Resolution
+    cmap='RdYlGn',      # Color map
+    save_path='custom_heatmap.png'
+)
+
+# Customize interactive features
+viz.plot_interactive_scorecard(
+    scores,
+    title='Custom Dashboard',
+    height=800,
+    width=1200,
+    save_path='custom_scorecard.html'
+)
+```
+
+---
+
+### File Naming Convention
+
+| Prefix | Source | Example |
+|--------|--------|---------|
+| `01-16_*` | `complete_demo.py` | `01_radar_chart.png` |
+| `adv_nb_*` | `advanced_visualizations_demo.py` | `adv_nb_01_distribution.png` |
+| `nb_*` | Jupyter notebooks | `nb_01_adli.png` |
+| `Fig[1-15]_*` | Manuscript figures | `Fig1_BEB-EdPEx_Category_Performance_Radar.png` |
+
+---
+
+### Technical Specifications
+
+**Static Visualizations (PNG):**
+- **Resolution:** 300 DPI (publication quality)
+- **Color Space:** RGB
+- **Compression:** PNG lossless
+- **Typical Size:** 100-700 KB per file
+- **Libraries:** Matplotlib 3.8+, Seaborn 0.13+
+
+**Interactive Visualizations (HTML):**
+- **Framework:** Plotly.js 2.27+
+- **Compatibility:** All modern browsers (Chrome, Firefox, Safari, Edge)
+- **Offline:** Fully functional without internet connection
+- **Responsive:** Adapts to different screen sizes
+- **File Size:** 300-600 KB per file
+
+**Color Schemes:**
+- **Categorical:** Tab10, Set2, Paired
+- **Sequential:** Viridis, Plasma, Blues, Greens
+- **Diverging:** RdYlGn, RdBu, Spectral
+- **All schemes:** ColorBlind-friendly options available
+
+---
+
 ## Empirical Validation
 
 ### Study Design
@@ -372,24 +659,34 @@ EdcellenceEdPEx/
 │   ├── algorithms/
 │   │   └── organizational_scoring.py    # ADLI/LeTCI scoring algorithms
 │   └── visualizations/
-│       ├── scoring_visualizer.py        # Core visualizations
+│       ├── scoring_visualizer.py        # Core visualizations (18+ methods)
 │       └── advanced_visualizer.py       # Advanced analytics
 ├── examples/
-│   ├── complete_demo.py                 # Basic framework demo
-│   └── advanced_visualizations_demo.py  # Advanced demo
+│   ├── complete_demo.py                 # Basic framework demo (16 visualizations)
+│   └── advanced_visualizations_demo.py  # Advanced demo (11 visualizations)
 ├── notebooks/
-│   ├── 01_Framework_Complete_Demo.ipynb
-│   └── 02_Advanced_Visualizations.ipynb
+│   ├── 01_Framework_Complete_Demo.ipynb # Interactive tutorial (9 visualizations)
+│   └── 02_Advanced_Visualizations.ipynb # Advanced techniques (9 visualizations)
 ├── tests/
-│   └── test_organizational_scoring.py   # 32 comprehensive tests
+│   └── test_organizational_scoring.py   # 32 comprehensive tests (96.9% pass)
 ├── data/
 │   └── sample/
-│       └── organizational_data.json     # Sample dataset
-├── manuscript_figures/                   # 15 publication-ready figures
+│       └── organizational_data.json     # Sample dataset (5-year trends)
+├── outputs/                              # Generated visualizations (auto-created)
+│   ├── *.png                            # 28 static charts (300 DPI)
+│   └── *.html                           # 10 interactive dashboards (Plotly)
+├── manuscript_figures/                   # 15 publication-ready figures (300 DPI PNG, 4.5 MB)
+│   ├── Fig1_BEB-EdPEx_Category_Performance_Radar.png
+│   ├── Fig2_ADLI_Process_Scoring_Breakdown.png
+│   ├── ...
+│   └── Fig15_Empirical_Validation_Results.png
 ├── docs/                                 # Documentation
+│   ├── MANUSCRIPT_FIGURES_README.md     # Figure captions
+│   └── IEEE_ACCESS_SUBMISSION_GUIDE.md  # Submission guide
 ├── setup-venv.bat                        # Windows setup script
 ├── setup-venv.sh                         # Linux/Mac setup script
 ├── requirements.txt                      # Python dependencies
+├── LICENSE                               # MIT License
 └── README.md                             # This file
 ```
 
