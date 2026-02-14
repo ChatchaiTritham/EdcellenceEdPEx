@@ -1,0 +1,142 @@
+================================================================================
+EdcellenceEdPEx - Quick Setup Guide
+================================================================================
+
+AUTOMATED SETUP (RECOMMENDED)
+================================================================================
+
+Windows Users:
+--------------
+  Double-click:  setup-venv.bat
+
+  OR from Command Prompt:
+  > setup-venv.bat
+
+Linux/Mac Users:
+----------------
+  From terminal:
+  $ chmod +x setup-venv.sh
+  $ ./setup-venv.sh
+
+This will automatically:
+  ✓ Create virtual environment (venv-edpex)
+  ✓ Install all dependencies
+  ✓ Verify installation
+
+================================================================================
+
+MANUAL SETUP
+================================================================================
+
+If you prefer manual setup:
+
+1. Create virtual environment:
+   Windows:   python -m venv venv-edpex
+   Linux/Mac: python3 -m venv venv-edpex
+
+2. Activate virtual environment:
+   Windows:   venv-edpex\Scripts\activate
+   Linux/Mac: source venv-edpex/bin/activate
+
+3. Upgrade pip:
+   python -m pip install --upgrade pip
+
+4. Install dependencies:
+   pip install -r requirements.txt
+
+5. Verify installation:
+   python -c "import numpy, pandas, matplotlib, plotly, networkx"
+
+================================================================================
+
+RUNNING DEMONSTRATIONS
+================================================================================
+
+After setup, activate the environment and run:
+
+  Basic Visualizations (7 charts):
+  > python examples/complete_demo.py
+
+  Advanced Visualizations (11 charts):
+  > python examples/advanced_visualizations_demo.py
+
+Output saved to: outputs/
+
+================================================================================
+
+REQUIREMENTS
+================================================================================
+
+- Python: 3.8 or higher
+- Disk Space: ~500 MB (for dependencies)
+- Internet: Required for initial installation
+- RAM: Minimum 4 GB recommended
+
+================================================================================
+
+KEY DEPENDENCIES
+================================================================================
+
+Core Framework:
+  - numpy >= 1.24.0
+  - pandas >= 2.0.0
+  - scipy >= 1.10.0
+
+Visualization:
+  - matplotlib >= 3.7.0
+  - seaborn >= 0.13.0
+  - plotly >= 5.18.0
+  - networkx >= 3.1
+
+API & Database:
+  - fastapi >= 0.109.0
+  - postgresql >= 13
+
+Full list: requirements.txt
+
+================================================================================
+
+TROUBLESHOOTING
+================================================================================
+
+Installation Fails:
+  - Check internet connection
+  - Ensure Python 3.8+ is installed
+  - Try: pip install --upgrade pip setuptools wheel
+  - Use: pip install -r requirements.txt --verbose
+
+Import Errors:
+  - Ensure virtual environment is activated
+  - Reinstall package: pip install <package> --force-reinstall
+
+Windows "Scripts not enabled" Error:
+  - Run as Administrator
+  - OR: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+Linux/Mac Permission Denied:
+  - Make executable: chmod +x setup-venv.sh
+  - Check Python path: which python3
+
+================================================================================
+
+DEACTIVATING ENVIRONMENT
+================================================================================
+
+When finished working:
+  > deactivate
+
+This returns you to your system Python environment.
+
+================================================================================
+
+SUPPORT
+================================================================================
+
+For issues or questions:
+  - Email: chatchait66@nu.ac.th
+  - GitHub Issues: [Repository URL]/issues
+
+Authors: Saosing et al. (2026)
+License: MIT
+
+================================================================================
