@@ -1,0 +1,294 @@
+{
+  "organization": {
+    "name": "Rajamangala University of Technology Krungthep",
+    "type": "Higher Education Institution",
+    "location": "Bangkok, Thailand",
+    "assessment_period": "2024-2025"
+  },
+  "categories": {
+    "1": {
+      "name": "Leadership",
+      "items": {
+        "1": {
+          "name": "Senior Leadership",
+          "score": 75.0,
+          "indicators": {
+            "P_A": 0.80,
+            "P_D": 0.70,
+            "P_L": 0.75,
+            "P_I": 0.75
+          }
+        },
+        "2": {
+          "name": "Governance & Societal Contributions",
+          "score": 72.0,
+          "indicators": {
+            "P_A": 0.75,
+            "P_D": 0.68,
+            "P_L": 0.72,
+            "P_I": 0.73
+          }
+        },
+        "3": {
+          "name": "Legal & Ethical Behavior",
+          "score": 78.0,
+          "indicators": {
+            "P_A": 0.82,
+            "P_D": 0.75,
+            "P_L": 0.78,
+            "P_I": 0.77
+          }
+        }
+      }
+    },
+    "2": {
+      "name": "Strategy",
+      "items": {
+        "1": {
+          "name": "Strategy Development",
+          "score": 65.0,
+          "indicators": {
+            "P_A": 0.70,
+            "P_D": 0.60,
+            "P_L": 0.65,
+            "P_I": 0.65
+          }
+        },
+        "2": {
+          "name": "Strategy Implementation",
+          "score": 59.0,
+          "indicators": {
+            "P_A": 0.75,
+            "P_D": 0.45,
+            "P_L": 0.60,
+            "P_I": 0.55
+          }
+        },
+        "3": {
+          "name": "Action Plan Development",
+          "score": 70.0,
+          "indicators": {
+            "P_A": 0.72,
+            "P_D": 0.68,
+            "P_L": 0.70,
+            "P_I": 0.70
+          }
+        }
+      }
+    },
+    "3": {
+      "name": "Customers",
+      "items": {
+        "1": {
+          "name": "Customer Expectations",
+          "score": 80.0,
+          "indicators": {
+            "P_A": 0.82,
+            "P_D": 0.78,
+            "P_L": 0.80,
+            "P_I": 0.80
+          }
+        },
+        "2": {
+          "name": "Customer Engagement",
+          "score": 85.0,
+          "indicators": {
+            "P_A": 0.88,
+            "P_D": 0.82,
+            "P_L": 0.85,
+            "P_I": 0.85
+          }
+        },
+        "3": {
+          "name": "Student Satisfaction",
+          "score": 82.0,
+          "indicators": {
+            "P_A": 0.85,
+            "P_D": 0.80,
+            "P_L": 0.82,
+            "P_I": 0.81
+          }
+        }
+      }
+    },
+    "4": {
+      "name": "Measurement",
+      "items": {
+        "1": {
+          "name": "Performance Measurement",
+          "score": 68.0,
+          "indicators": {
+            "P_A": 0.70,
+            "P_D": 0.66,
+            "P_L": 0.68,
+            "P_I": 0.68
+          }
+        },
+        "2": {
+          "name": "Data Management",
+          "score": 72.0,
+          "indicators": {
+            "P_A": 0.75,
+            "P_D": 0.70,
+            "P_L": 0.72,
+            "P_I": 0.71
+          }
+        },
+        "3": {
+          "name": "Knowledge Management",
+          "score": 70.0,
+          "indicators": {
+            "P_A": 0.72,
+            "P_D": 0.68,
+            "P_L": 0.70,
+            "P_I": 0.70
+          }
+        }
+      }
+    },
+    "5": {
+      "name": "Workforce",
+      "items": {
+        "1": {
+          "name": "Workforce Environment",
+          "score": 74.0,
+          "indicators": {
+            "P_A": 0.76,
+            "P_D": 0.72,
+            "P_L": 0.74,
+            "P_I": 0.74
+          }
+        },
+        "2": {
+          "name": "Workforce Engagement",
+          "score": 76.0,
+          "indicators": {
+            "P_A": 0.78,
+            "P_D": 0.74,
+            "P_L": 0.76,
+            "P_I": 0.76
+          }
+        },
+        "3": {
+          "name": "Workforce Development",
+          "score": 75.0,
+          "indicators": {
+            "P_A": 0.77,
+            "P_D": 0.73,
+            "P_L": 0.75,
+            "P_I": 0.75
+          }
+        }
+      }
+    },
+    "6": {
+      "name": "Operations",
+      "items": {
+        "1": {
+          "name": "Work Processes",
+          "score": 69.0,
+          "indicators": {
+            "P_A": 0.71,
+            "P_D": 0.67,
+            "P_L": 0.69,
+            "P_I": 0.69
+          }
+        },
+        "2": {
+          "name": "Operational Effectiveness",
+          "score": 71.0,
+          "indicators": {
+            "P_A": 0.73,
+            "P_D": 0.69,
+            "P_L": 0.71,
+            "P_I": 0.71
+          }
+        },
+        "3": {
+          "name": "Innovation Management",
+          "score": 68.0,
+          "indicators": {
+            "P_A": 0.70,
+            "P_D": 0.66,
+            "P_L": 0.68,
+            "P_I": 0.68
+          }
+        }
+      }
+    },
+    "7": {
+      "name": "Results",
+      "items": {
+        "1": {
+          "name": "Student Learning Outcomes",
+          "score": 88.0,
+          "indicators": {
+            "R_Lv": 0.90,
+            "R_Tr": 0.88,
+            "R_Cp": 0.86,
+            "R_I": 0.88
+          }
+        },
+        "2": {
+          "name": "Stakeholder Satisfaction",
+          "score": 85.0,
+          "indicators": {
+            "R_Lv": 0.87,
+            "R_Tr": 0.85,
+            "R_Cp": 0.83,
+            "R_I": 0.85
+          }
+        },
+        "3": {
+          "name": "Operational Performance",
+          "score": 90.0,
+          "indicators": {
+            "R_Lv": 0.92,
+            "R_Tr": 0.90,
+            "R_Cp": 0.88,
+            "R_I": 0.90
+          }
+        }
+      }
+    }
+  },
+  "historical_trends": {
+    "2020-2021": {
+      "1": 65, "2": 58, "3": 70, "4": 60, "5": 66, "6": 62, "7": 75
+    },
+    "2021-2022": {
+      "1": 68, "2": 62, "3": 74, "4": 64, "5": 69, "6": 65, "7": 79
+    },
+    "2022-2023": {
+      "1": 71, "2": 65, "3": 78, "4": 67, "5": 72, "6": 67, "7": 83
+    },
+    "2023-2024": {
+      "1": 73, "2": 67, "3": 80, "4": 69, "5": 74, "6": 68, "7": 85
+    },
+    "2024-2025": {
+      "1": 75, "2": 68, "3": 82, "4": 70, "5": 75, "6": 69, "7": 87
+    }
+  },
+  "targets_2025": {
+    "1": 85, "2": 80, "3": 90, "4": 80, "5": 85, "6": 80, "7": 95
+  },
+  "benchmarks": {
+    "national_average": {
+      "1": 70, "2": 65, "3": 75, "4": 68, "5": 72, "6": 67, "7": 80
+    },
+    "top_quartile": {
+      "1": 85, "2": 82, "3": 88, "4": 84, "5": 86, "6": 83, "7": 92
+    },
+    "international_standard": {
+      "1": 90, "2": 88, "3": 92, "4": 90, "5": 91, "6": 89, "7": 95
+    }
+  },
+  "metadata": {
+    "total_units": 24,
+    "assessment_framework": "BEB-EdPEx-TQF-AUNQA",
+    "data_collection_period": "September 2024 - August 2025",
+    "validation_method": "ADLI-LeTCI Computational Framework",
+    "statistical_significance": "p < 0.001",
+    "effect_size": "Cohen's d = 2.1-3.8"
+  }
+}
