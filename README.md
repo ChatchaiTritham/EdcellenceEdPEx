@@ -284,9 +284,9 @@ If you use this framework in your research, please cite:
 ### Paper (In Press)
 
 ```bibtex
-@article{saosing2026edpex,
+@article{tritham2026edpex,
   title={From Excellence Guidelines to Computable Performance Systems: A Novel Framework for Educational Performance Excellence Assessment},
-  author={Saosing, Rungtiva and Tritham, Chatchai and Tritham, Chattabhorn and Ngammongkolwong, Sudasawan},
+  author={Tritham, Chatchai and Saosing, Rungtiva and Kamlangkla, Kanchit and Tritham, Chattabhorn},
   journal={IEEE ACCESS},
   year={2026},
   note={In Press}
@@ -296,9 +296,9 @@ If you use this framework in your research, please cite:
 ### Software
 
 ```bibtex
-@software{tritham2026edpex,
+@software{tritham2026edpex_software,
   title={EdcellenceEdPEx: BEB-EdPEx Framework Implementation},
-  author={Tritham, Chatchai and Saosing, Rungtiva and Tritham, Chattabhorn and Ngammongkolwong, Sudasawan},
+  author={Tritham, Chatchai and Saosing, Rungtiva and Kamlangkla, Kanchit and Tritham, Chattabhorn},
   year={2026},
   url={https://github.com/ChatchaiTritham/EdcellenceEdPEx},
   version={1.0}
@@ -323,33 +323,34 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Authors
 
-### Principal Investigators
-
-**Rungtiva Saosing** (Corresponding Author)
+**Chatchai Tritham** (Corresponding Author & Project Manager)
 Faculty of Science and Technology
-Rajamangala University of Technology Krungthep
-Bangkok, Thailand
-📧 rungtiva.s@rmutk.ac.th
+Rajamangala University of Technology Krungthep, Thailand
+📧 chatchait66@nu.ac.th
+🆔 ORCID: [0000-0001-7899-228X](https://orcid.org/0000-0001-7899-228X)
 
-**Chatchai Tritham**
+**Rungtiva Saosing** (First Author)
 Faculty of Science and Technology
-Rajamangala University of Technology Krungthep
-📧 chatchai.t@rmutk.ac.th
+Rajamangala University of Technology Krungthep, Thailand
+📧 rungtiva.s@mail.rmutt.ac.th
+🆔 ORCID: [0009-0007-8713-8190](https://orcid.org/0009-0007-8713-8190)
 
-**Chattabhorn Tritham**
+**Kanchit Kamlangkla** (Co-Author)
 Faculty of Science and Technology
-Rajamangala University of Technology Krungthep
+Rajamangala University of Technology Krungthep, Thailand
+📧 kanchit.k@mail.rmutk.ac.th
 
-**Sudasawan Ngammongkolwong**
-Faculty of Science and Technology
-Rajamangala University of Technology Krungthep
+**Chattabhorn Tritham** (Co-Author & Software Engineer)
+Thammasat School of Engineering (TSE)
+Thammasat University, Thailand
+🆔 ORCID: [0009-0003-2408-7374](https://orcid.org/0009-0003-2408-7374)
 
 ### Contributions
 
-- **R.S.:** Conceptualization, methodology, validation, writing—original draft
-- **C.T. (Chatchai):** Software development, algorithm implementation, visualization, data curation
-- **C.T. (Chattabhorn):** Data analysis, statistical validation, writing—review and editing
-- **S.N.:** Project administration, resources, supervision
+- **C.T. (Chatchai):** Project management, conceptualization, software development, algorithm implementation
+- **R.S.:** Methodology, validation, empirical study design, writing—original draft
+- **K.K.:** Data analysis, institutional coordination, resources
+- **C.T. (Chattabhorn):** Software engineering, statistical validation, visualization, writing—review
 
 ---
 
@@ -482,15 +483,24 @@ Please report issues via [GitHub Issues](https://github.com/ChatchaiTritham/Edce
 
 ### Contact
 
-For questions or collaboration inquiries:
-- 📧 Email: rungtiva.s@rmutk.ac.th
-- 🌐 Institution: [RMUTK Website](https://www.rmutk.ac.th)
+**For questions or collaboration inquiries:**
+
+**Corresponding Author:**
+- 📧 Chatchai Tritham: chatchait66@nu.ac.th
+- 🆔 ORCID: [0000-0001-7899-228X](https://orcid.org/0000-0001-7899-228X)
+
+**First Author:**
+- 📧 Rungtiva Saosing: rungtiva.s@mail.rmutt.ac.th
+- 🆔 ORCID: [0009-0007-8713-8190](https://orcid.org/0009-0007-8713-8190)
+
+**Institution:**
+- 🌐 [Rajamangala University of Technology Krungthep](https://www.rmutk.ac.th)
 
 ---
 
 ## Related Publications
 
-1. **Saosing, R., et al.** (2026). From Excellence Guidelines to Computable Performance Systems. *IEEE ACCESS*. (In Press)
+1. **Tritham, C., Saosing, R., Kamlangkla, K., & Tritham, C.** (2026). From Excellence Guidelines to Computable Performance Systems: A Novel Framework for Educational Performance Excellence Assessment. *IEEE ACCESS*. (In Press)
 
 2. **NIST** (2023). Baldrige Excellence Framework: Education. National Institute of Standards and Technology, USA.
 
