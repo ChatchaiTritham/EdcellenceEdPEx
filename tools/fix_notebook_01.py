@@ -198,19 +198,31 @@ print('[OK] Interactive scorecard (also saved as HTML)')"""),
 
 md("## Section 7: Trend Analysis (2020-2025)"),
 
-code("""trend_data = {}
-for cid_str, cdata in data['categories'].items():
-    cid = int(cid_str)
-    if 'historical' in cdata:
-        trend_data[cid] = {2020 + i: v for i, v in enumerate(cdata['historical'])}
+code("""# Extract trend data from historical_trends section and plot all categories
+if 'historical_trends' in data:
+    # historical_trends format: {'2020-2021': {cid: score}, ...}
+    periods = sorted(data['historical_trends'].keys())
+    years = [int(p.split('-')[0]) for p in periods]
 
-if trend_data:
-    fig = viz.plot_trend_analysis(
-        trend_data,
-        save_path=os.path.join(repo_root, 'outputs', 'nb_08_trends.png')
-    )
+    # Create multi-category trend chart
+    fig, ax = plt.subplots(figsize=(12, 7))
+
+    for cid in range(1, 8):
+        scores = [data['historical_trends'][p].get(str(cid), 70) for p in periods]
+        ax.plot(years, scores, marker='o', linewidth=2.5, markersize=7,
+                label=cat_names[cid], alpha=0.85)
+
+    ax.set_xlabel('Academic Year', fontsize=12, fontweight='bold')
+    ax.set_ylabel('Category Score', fontsize=12, fontweight='bold')
+    ax.set_title('5-Year Performance Trends by Category (2020-2025)', fontsize=14, fontweight='bold')
+    ax.legend(loc='best', fontsize=10)
+    ax.grid(True, alpha=0.3)
+    ax.set_ylim(55, 90)
+    plt.tight_layout()
+    save_path = os.path.join(repo_root, 'outputs', 'nb_08_trends.png')
+    plt.savefig(save_path, dpi=300, bbox_inches='tight')
     plt.show()
-    print('[OK] Trend analysis chart')
+    print(f'[OK] Trend analysis chart saved to {save_path}')
 else:
     print('No historical data available')"""),
 
