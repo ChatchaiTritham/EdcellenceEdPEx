@@ -324,20 +324,17 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Authors
 
 **Chatchai Tritham** (Corresponding Author & Project Manager)
-Faculty of Science and Technology
-Rajamangala University of Technology Krungthep, Thailand
+Faculty of Science and Technology Rajamangala, University of Technology Krungthep, Bangkok 10120 Thailand
 📧 chatchait66@nu.ac.th
 🆔 ORCID: [0000-0001-7899-228X](https://orcid.org/0000-0001-7899-228X)
 
 **Rungtiva Saosing** (First Author)
-Faculty of Science and Technology
-Rajamangala University of Technology Krungthep, Thailand
+Faculty of Science and Technology Rajamangala, University of Technology Krungthep, Bangkok 10120 Thailand
 📧 rungtiva.s@mail.rmutt.ac.th
 🆔 ORCID: [0009-0007-8713-8190](https://orcid.org/0009-0007-8713-8190)
 
 **Kanchit Kamlangkla** (Co-Author)
-Faculty of Science and Technology
-Rajamangala University of Technology Krungthep, Thailand
+Faculty of Science and Technology Rajamangala, University of Technology Krungthep, Bangkok 10120 Thailand
 📧 kanchit.k@mail.rmutk.ac.th
 
 **Chattabhorn Tritham** (Co-Author & Software Engineer)
@@ -495,15 +492,8 @@ Please report issues via [GitHub Issues](https://github.com/ChatchaiTritham/Edce
 - 🆔 ORCID: [0009-0007-8713-8190](https://orcid.org/0009-0007-8713-8190)
 
 **Institution:**
+- 🌐 Faculty of Science and Technology Rajamangala, University of Technology Krungthep, Bangkok 10120 Thailand
 - 🌐 [Rajamangala University of Technology Krungthep](https://www.rmutk.ac.th)
-
----
-
-## Related Publications
-
-1. **Tritham, C., Saosing, R., Kamlangkla, K., & Tritham, C.** (2026). From Excellence Guidelines to Computable Performance Systems: A Novel Framework for Educational Performance Excellence Assessment. *IEEE ACCESS*. (In Press)
-
-2. **NIST** (2023). Baldrige Excellence Framework: Education. National Institute of Standards and Technology, USA.
 
 ---
 
