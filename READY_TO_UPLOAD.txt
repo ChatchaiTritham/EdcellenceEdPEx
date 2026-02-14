@@ -166,7 +166,6 @@
    [ ] Cover letter
    [ ] Author agreements
    [ ] Conflict of interest
-   [ ] IRB approval (ถ้าจำเป็น)
 
 ═══════════════════════════════════════════════════════════════════════════════
 

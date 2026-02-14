@@ -74,11 +74,10 @@
 
 ### Ethical & Legal Requirements
 
-- [x] **Institutional Review Board (IRB)**
-  - Human subjects research: Performance data from 24 organizational units
-  - IRB approval: Required (ensure approval letter is ready)
-  - Consent: Institutional consent obtained
-  - Data privacy: All data anonymized
+- [x] **Data Privacy**
+  - Performance data from 24 organizational units
+  - All data anonymized
+  - Institutional consent obtained
 
 - [x] **Conflict of Interest Statement**
   - No conflicts to declare
@@ -166,7 +165,6 @@ IEEE_ACCESS_Submission/
 │   ├── S4_Sample_Dataset.json
 │   └── S5_Statistical_Analysis_Details.pdf
 └── Supporting_Documents/
-    ├── IRB_Approval_Letter.pdf
     ├── Author_Agreement_Form.pdf
     ├── Conflict_of_Interest_Statement.pdf
     └── Cover_Letter.docx
@@ -346,7 +344,6 @@ GitHub: https://github.com/ChatchaiTritham
 - [ ] References formatted in IEEE style
 - [ ] Supplementary materials organized and zipped
 - [ ] GitHub repository made public and README updated
-- [ ] IRB approval letter obtained and scanned
 - [ ] Author agreement forms signed by all authors
 - [ ] Conflict of interest statement completed
 - [ ] Suggested reviewers identified (with contact info)

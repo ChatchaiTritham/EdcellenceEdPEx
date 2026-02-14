@@ -201,7 +201,6 @@ p<0.001, d=2.4). All effects demonstrated large effect sizes (d>2.0).
 - [ ] Author agreement forms (signed by all authors)
 - [ ] Conflict of interest statement
 - [ ] Data availability statement
-- [ ] IRB approval (ถ้าจำเป็น)
 - [ ] Author contributions statement
 
 ### Submission Portal

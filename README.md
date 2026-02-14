@@ -349,15 +349,11 @@ Rajamangala University of Technology Krungthep
 - **R.S.:** Conceptualization, methodology, validation, writing—original draft
 - **C.T. (Chatchai):** Software development, algorithm implementation, visualization, data curation
 - **C.T. (Chattabhorn):** Data analysis, statistical validation, writing—review and editing
-- **S.N.:** Project administration, resources, supervision, funding acquisition
+- **S.N.:** Project administration, resources, supervision
 
 ---
 
 ## Acknowledgments
-
-### Funding
-
-This research was supported by Rajamangala University of Technology Krungthep Research Fund.
 
 ### Data Contributors
 

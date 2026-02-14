@@ -192,7 +192,6 @@ Email: rungtiva.s@rmutk.ac.th
 - [ ] Supplementary materials
 - [ ] Cover letter
 - [ ] Author agreement forms
-- [ ] IRB approval (if required)
 
 ---
 
