@@ -161,7 +161,7 @@ R.S.: Conceptualization, methodology, validation, writing—original draft.
 C.T. (Chatchai): Software development, algorithm implementation,
 visualization, data curation. C.T. (Chattabhorn): Data analysis,
 statistical validation, writing—review and editing. S.N.: Project
-administration, resources, supervision, funding acquisition. All authors
+administration, resources, supervision. All authors
 have read and approved the final manuscript.
 ```
 
