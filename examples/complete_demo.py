@@ -312,7 +312,7 @@ def print_statistical_validation():
     results = [
         ("Assessment Cycle Duration", "6.5 weeks", "2.0 weeks", "-69%", "p<0.001", "d=3.2"),
         ("Document Artifacts", "450 docs", "80 docs", "-82%", "p<0.001", "d=3.8"),
-        ("Measurement Consistency (α)", "0.62", "0.88", "+42%", "p<0.001", "d=2.1"),
+        ("Measurement Consistency (alpha)", "0.62", "0.88", "+42%", "p<0.001", "d=2.1"),
         ("Review Duration", "4.5 hrs", "2.5 hrs", "-44%", "p<0.001", "d=2.4"),
     ]
 
