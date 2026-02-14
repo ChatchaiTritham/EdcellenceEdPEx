@@ -13,20 +13,18 @@ Usage:
     python examples/complete_demo.py
 """
 
-import sys
 import os
 import json
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Add src to path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
-
-from algorithms.adli_scoring import ADLIScorer, compute_adli_score
-from algorithms.letci_scoring import LeTCIScorer, compute_letci_score
-from algorithms.organizational_scoring import OrganizationalScorer, create_sample_organization_data
-from visualizations.scoring_visualizer import ScoringVisualizer
+# Import from edcellence package
+from edcellence.algorithms.adli_scoring import ADLIScorer, compute_adli_score
+from edcellence.algorithms.letci_scoring import LeTCIScorer, compute_letci_score
+from edcellence.algorithms.organizational_scoring import OrganizationalScorer, create_sample_organization_data
+from edcellence.visualizations.scoring_visualizer import ScoringVisualizer
+from edcellence.data import get_sample_data_path
 
 
 def load_sample_data():

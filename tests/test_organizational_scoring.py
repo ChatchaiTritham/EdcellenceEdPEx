@@ -13,13 +13,9 @@ Tests validate all core algorithms:
 import pytest
 import numpy as np
 import pandas as pd
-import sys
-import os
 
-# Add src to path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
-
-from algorithms.organizational_scoring import OrganizationalScorer, ScoreResult
+# Import from edcellence package
+from edcellence.algorithms.organizational_scoring import OrganizationalScorer, ScoreResult
 
 
 class TestADLIScoring:

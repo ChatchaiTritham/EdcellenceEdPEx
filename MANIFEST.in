@@ -1,0 +1,32 @@
+# Include documentation
+include README.md
+include LICENSE
+include requirements.txt
+include requirements-dev.txt
+
+# Include configuration files
+include pyproject.toml
+include setup.py
+
+# Include sample data
+recursive-include edcellence/data *.json
+
+# Exclude development files
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude __pycache__
+global-exclude .DS_Store
+global-exclude .git*
+
+# Exclude build artifacts
+prune build
+prune dist
+prune *.egg-info
+
+# Exclude test outputs
+prune outputs
+prune .pytest_cache
+
+# Exclude virtual environments
+prune venv*
+prune env

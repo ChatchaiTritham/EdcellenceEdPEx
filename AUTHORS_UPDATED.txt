@@ -1,0 +1,165 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║              ✓ อัปเดตข้อมูล Authors และ Contact เรียบร้อย                  ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+วันที่: 14 กุมภาพันธ์ 2026
+สถานะ: Updated และ Push ไป GitHub แล้ว
+
+═══════════════════════════════════════════════════════════════════════════════
+
+ข้อมูล Authors ใหม่:
+═══════════════════════════════════════════════════════════════════════════════
+
+[1] Chatchai Tritham (Corresponding Author & Project Manager)
+    Email: chatchait66@nu.ac.th
+    ORCID: 0000-0001-7899-228X
+    Institution: Faculty of Science and Technology
+                 Rajamangala University of Technology Krungthep, Thailand
+    Role: Project management, conceptualization, software development,
+          algorithm implementation
+
+[2] Rungtiva Saosing (First Author)
+    Email: rungtiva.s@mail.rmutt.ac.th
+    ORCID: 0009-0007-8713-8190
+    Institution: Faculty of Science and Technology
+                 Rajamangala University of Technology Krungthep, Thailand
+    Role: Methodology, validation, empirical study design,
+          writing—original draft
+
+[3] Kanchit Kamlangkla (Co-Author)
+    Email: kanchit.k@mail.rmutk.ac.th
+    Institution: Faculty of Science and Technology
+                 Rajamangala University of Technology Krungthep, Thailand
+    Role: Data analysis, institutional coordination, resources
+
+[4] Chattabhorn Tritham (Co-Author & Software Engineer)
+    ORCID: 0009-0003-2408-7374
+    Institution: Thammasat School of Engineering (TSE)
+                 Thammasat University, Thailand
+    Role: Software engineering, statistical validation, visualization,
+          writing—review
+
+═══════════════════════════════════════════════════════════════════════════════
+
+การเปลี่ยนแปลง:
+═══════════════════════════════════════════════════════════════════════════════
+
+✓ Author Order
+  - Chatchai Tritham เป็น Corresponding Author (เดิม: Rungtiva)
+  - Rungtiva Saosing เป็น First Author
+  - เพิ่ม Kanchit Kamlangkla แทน Sudasawan Ngammongkolwong
+  - Chattabhorn Tritham ย้ายไป Thammasat University
+
+✓ Email Addresses
+  - Chatchai: chatchait66@nu.ac.th (new)
+  - Rungtiva: rungtiva.s@mail.rmutt.ac.th (updated)
+  - Kanchit: kanchit.k@mail.rmutk.ac.th (new)
+
+✓ ORCID IDs
+  - Chatchai: 0000-0001-7899-228X (new)
+  - Rungtiva: 0009-0007-8713-8190 (new)
+  - Chattabhorn: 0009-0003-2408-7374 (new)
+
+✓ Affiliations
+  - Chatchai, Rungtiva, Kanchit: RMUTK
+  - Chattabhorn: Thammasat University (updated)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+ไฟล์ที่อัปเดต:
+═══════════════════════════════════════════════════════════════════════════════
+
+[1] README.md
+    - Authors section with full contact info
+    - ORCID links
+    - Updated contributions
+    - Contact section
+    - Citation (BibTeX)
+
+[2] IEEE_ACCESS_SUBMISSION_GUIDE.md
+    - Author list in submission template
+    - Contact information
+
+[3] MANUSCRIPT_READY_TH.md
+    - ข้อมูล authors ภาษาไทย
+    - Contact details
+
+[4] UPLOAD_SUCCESS.md
+    - Author information
+    - Contact details
+
+═══════════════════════════════════════════════════════════════════════════════
+
+Citation (BibTeX) - Updated:
+═══════════════════════════════════════════════════════════════════════════════
+
+@article{tritham2026edpex,
+  title={From Excellence Guidelines to Computable Performance Systems:
+         A Novel Framework for Educational Performance Excellence Assessment},
+  author={Tritham, Chatchai and Saosing, Rungtiva and
+          Kamlangkla, Kanchit and Tritham, Chattabhorn},
+  journal={IEEE ACCESS},
+  year={2026},
+  note={In Press}
+}
+
+@software{tritham2026edpex_software,
+  title={EdcellenceEdPEx: BEB-EdPEx Framework Implementation},
+  author={Tritham, Chatchai and Saosing, Rungtiva and
+          Kamlangkla, Kanchit and Tritham, Chattabhorn},
+  year={2026},
+  url={https://github.com/ChatchaiTritham/EdcellenceEdPEx},
+  version={1.0}
+}
+
+═══════════════════════════════════════════════════════════════════════════════
+
+Contact Information (สำหรับ Manuscript):
+═══════════════════════════════════════════════════════════════════════════════
+
+Corresponding Author:
+  Chatchai Tritham
+  Email: chatchait66@nu.ac.th
+  ORCID: 0000-0001-7899-228X
+  Institution: Faculty of Science and Technology,
+               Rajamangala University of Technology Krungthep, Thailand
+
+First Author:
+  Rungtiva Saosing
+  Email: rungtiva.s@mail.rmutt.ac.th
+  ORCID: 0009-0007-8713-8190
+  Institution: Faculty of Science and Technology,
+               Rajamangala University of Technology Krungthep, Thailand
+
+═══════════════════════════════════════════════════════════════════════════════
+
+GitHub Repository:
+═══════════════════════════════════════════════════════════════════════════════
+
+URL: https://github.com/ChatchaiTritham/EdcellenceEdPEx
+Status: Updated
+Commit: d75993f - Update author information and contact details
+
+═══════════════════════════════════════════════════════════════════════════════
+
+Repository Status - Complete:
+═══════════════════════════════════════════════════════════════════════════════
+
+✓ No AI references
+✓ No Funding references
+✓ No IRB references
+✓ Updated Authors (4 authors)
+✓ Updated Contact details
+✓ Updated ORCID IDs
+✓ Updated Email addresses
+✓ Updated Citations
+✓ Professional documentation
+✓ Ready for IEEE ACCESS submission
+
+═══════════════════════════════════════════════════════════════════════════════
+
+เสร็จสมบูรณ์! พร้อมใช้งาน 100%
+
+═══════════════════════════════════════════════════════════════════════════════

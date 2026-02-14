@@ -1,0 +1,123 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "edcellence"
+version = "1.0.0"
+description = "Educational Performance Excellence Assessment Framework - Computational implementation of Baldrige Excellence Framework for higher education"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Chatchai Tritham", email = "chatchait66@nu.ac.th"},
+    {name = "Rungtiva Saosing", email = "rungtiva.s@mail.rmutt.ac.th"},
+    {name = "Kanchit Kamlangkla", email = "kanchit.k@mail.rmutk.ac.th"},
+    {name = "Chattabhorn Tritham", email = "memodia@live.com"},
+]
+maintainers = [
+    {name = "Chatchai Tritham", email = "chatchait66@nu.ac.th"},
+]
+keywords = [
+    "education",
+    "performance-excellence",
+    "baldrige",
+    "assessment",
+    "higher-education",
+    "quality-assurance",
+    "organizational-performance",
+    "ADLI",
+    "LeTCI",
+    "BEB-EdPEx",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Education",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+
+dependencies = [
+    "matplotlib>=3.8.0",
+    "seaborn>=0.13.0",
+    "pandas>=2.1.0",
+    "numpy>=1.26.0",
+    "plotly>=5.18.0",
+    "networkx>=3.2.0",
+    "scipy>=1.11.0",
+    "statsmodels>=0.14.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.12.0",
+    "flake8>=7.0.0",
+    "mypy>=1.8.0",
+    "jupyter>=1.0.0",
+    "nbconvert>=7.14.0",
+]
+docs = [
+    "sphinx>=7.2.0",
+    "sphinx-rtd-theme>=2.0.0",
+]
+all = [
+    "edcellence[dev,docs]",
+]
+
+[project.urls]
+Homepage = "https://github.com/ChatchaiTritham/EdcellenceEdPEx"
+Documentation = "https://github.com/ChatchaiTritham/EdcellenceEdPEx/blob/master/README.md"
+Repository = "https://github.com/ChatchaiTritham/EdcellenceEdPEx"
+Issues = "https://github.com/ChatchaiTritham/EdcellenceEdPEx/issues"
+Changelog = "https://github.com/ChatchaiTritham/EdcellenceEdPEx/blob/master/README.md#changelog"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+packages = ["edcellence", "edcellence.algorithms", "edcellence.visualizations", "edcellence.data"]
+
+[tool.setuptools.package-data]
+edcellence = ["data/sample/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
+[tool.black]
+line-length = 100
+target-version = ['py39', 'py310', 'py311', 'py312', 'py313']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true

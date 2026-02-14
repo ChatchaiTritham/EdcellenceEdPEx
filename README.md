@@ -44,79 +44,107 @@
 
 ### Prerequisites
 
-- Python 3.13 or higher
+- Python 3.9 or higher
 - pip (Python package manager)
-- Git
+- Git (optional, for cloning)
 
-### Step 1: Clone Repository
+### Option 1: Install from GitHub (Recommended)
+
+```bash
+pip install git+https://github.com/ChatchaiTritham/EdcellenceEdPEx.git
+```
+
+### Option 2: Install from Source
+
+**Step 1: Clone Repository**
 
 ```bash
 git clone https://github.com/ChatchaiTritham/EdcellenceEdPEx.git
 cd EdcellenceEdPEx
 ```
 
-### Step 2: Create Virtual Environment
+**Step 2: Install Package**
 
-**Windows:**
 ```bash
-python -m venv venv-edpex
-venv-edpex\Scripts\activate
+# Install in editable mode (for development)
+pip install -e .
+
+# Or install normally
+pip install .
+
+# Or install with development dependencies
+pip install -e ".[dev]"
 ```
 
-**Linux/Mac:**
+### Option 3: Development Setup
+
+**Create Virtual Environment:**
+
 ```bash
+# Windows
+python -m venv venv-edpex
+venv-edpex\Scripts\activate
+
+# Linux/Mac
 python -m venv venv-edpex
 source venv-edpex/bin/activate
 ```
 
-### Step 3: Install Dependencies
+**Install in Editable Mode:**
 
 ```bash
-pip install --upgrade pip
-pip install matplotlib seaborn pandas numpy plotly networkx scipy statsmodels jupyter nbconvert
+pip install -e ".[dev]"
 ```
 
-### Automated Setup (Windows)
-
-```bash
-# Run automated setup script
-setup-venv.bat
-```
+This installs the package in editable mode with all development dependencies (pytest, jupyter, etc.)
 
 ---
 
 ## Quick Start
 
-### Basic Framework Demo
+### Python API Usage
+
+```python
+# Import the package
+from edcellence import OrganizationalScorer, ScoringVisualizer
+from edcellence.data import load_sample_data
+
+# Load sample data
+data = load_sample_data()
+
+# Initialize scorer and visualizer
+scorer = OrganizationalScorer()
+viz = ScoringVisualizer()
+
+# Calculate organizational score
+org_score = scorer.score_organization(data)
+print(f"Organization Score: {org_score:.2f}")
+
+# Generate visualizations
+category_scores = scorer.score_categories(data)
+viz.plot_radar_chart(category_scores, save_path='outputs/radar.png')
+viz.plot_interactive_scorecard(category_scores, save_path='outputs/scorecard.html')
+```
+
+### Run Example Scripts
+
+**Basic Framework Demo:**
 
 ```bash
 python examples/complete_demo.py
 ```
 
-**Outputs:** 7 visualizations demonstrating core framework features
-- Radar chart (category performance)
-- ADLI breakdown (process scoring)
-- LeTCI breakdown (results scoring)
-- Gap analysis heatmap
-- Priority matrix
-- 3D evolution surface
-- Interactive scorecard
+**Outputs:** 16 visualizations demonstrating core framework features
+- Radar chart, ADLI/LeTCI breakdowns, gap analysis, priority matrix, 3D evolution, interactive dashboards
 
-### Advanced Visualizations
+**Advanced Visualizations:**
 
 ```bash
 python examples/advanced_visualizations_demo.py
 ```
 
 **Outputs:** 11 advanced analytics visualizations
-- Distribution comparisons
-- Correlation matrices
-- Network dependency diagrams
-- Hierarchical sunburst charts
-- Sankey flow diagrams
-- Temporal decomposition
-- 3D scatter plots
-- Statistical summaries
+- Distribution comparisons, correlation matrices, network diagrams, sunburst charts, Sankey flows, temporal decomposition
 
 ### Jupyter Notebooks
 
@@ -124,6 +152,8 @@ python examples/advanced_visualizations_demo.py
 jupyter notebook notebooks/01_Framework_Complete_Demo.ipynb
 jupyter notebook notebooks/02_Advanced_Visualizations.ipynb
 ```
+
+**Interactive tutorials** covering all framework features with step-by-step explanations
 
 ---
 
@@ -530,39 +560,54 @@ This work builds upon the Baldrige Excellence Framework developed by the Nationa
 
 ```
 EdcellenceEdPEx/
-├── src/
+├── edcellence/                           # 📦 Main package
+│   ├── __init__.py                      # Package entry point (version, public API)
+│   ├── _version.py                      # Version management
 │   ├── algorithms/
-│   │   └── organizational_scoring.py    # ADLI/LeTCI scoring algorithms
-│   └── visualizations/
-│       ├── scoring_visualizer.py        # Core visualizations (18+ methods)
-│       └── advanced_visualizer.py       # Advanced analytics
-├── examples/
+│   │   ├── __init__.py
+│   │   ├── adli_scoring.py             # ADLI scoring algorithm
+│   │   ├── letci_scoring.py            # LeTCI scoring algorithm
+│   │   └── organizational_scoring.py    # Organizational-level scoring
+│   ├── visualizations/
+│   │   ├── __init__.py
+│   │   ├── scoring_visualizer.py       # Core visualizations (18+ methods)
+│   │   └── advanced_visualizer.py      # Advanced analytics
+│   └── data/                            # Package data
+│       ├── __init__.py                  # Data loading utilities
+│       └── sample/
+│           └── organizational_data.json # Sample dataset (5-year trends)
+│
+├── examples/                             # 📘 Usage examples
+│   ├── __init__.py
 │   ├── complete_demo.py                 # Basic framework demo (16 visualizations)
 │   └── advanced_visualizations_demo.py  # Advanced demo (11 visualizations)
-├── notebooks/
-│   ├── 01_Framework_Complete_Demo.ipynb # Interactive tutorial (9 visualizations)
-│   └── 02_Advanced_Visualizations.ipynb # Advanced techniques (9 visualizations)
-├── tests/
-│   └── test_organizational_scoring.py   # 32 comprehensive tests (96.9% pass)
-├── data/
-│   └── sample/
-│       └── organizational_data.json     # Sample dataset (5-year trends)
-├── outputs/                              # Generated visualizations (auto-created)
-│   ├── *.png                            # 28 static charts (300 DPI)
-│   └── *.html                           # 10 interactive dashboards (Plotly)
-├── manuscript_figures/                   # 15 publication-ready figures (300 DPI PNG, 4.5 MB)
+│
+├── notebooks/                            # 📓 Jupyter tutorials
+│   ├── 01_Framework_Complete_Demo.ipynb # Interactive tutorial
+│   └── 02_Advanced_Visualizations.ipynb # Advanced techniques
+│
+├── tests/                                # ✅ Unit tests
+│   ├── __init__.py
+│   ├── conftest.py                      # Pytest configuration & fixtures
+│   └── test_organizational_scoring.py   # 32 comprehensive tests
+│
+├── outputs/                              # 📊 Generated visualizations (gitignored)
+│   ├── *.png                            # Static charts (300 DPI)
+│   └── *.html                           # Interactive dashboards
+│
+├── manuscript_figures/                   # 📄 Publication figures (300 DPI, 4.5 MB)
 │   ├── Fig1_BEB-EdPEx_Category_Performance_Radar.png
-│   ├── Fig2_ADLI_Process_Scoring_Breakdown.png
 │   ├── ...
 │   └── Fig15_Empirical_Validation_Results.png
-├── docs/                                 # Documentation
-│   ├── MANUSCRIPT_FIGURES_README.md     # Figure captions
-│   └── IEEE_ACCESS_SUBMISSION_GUIDE.md  # Submission guide
-├── setup-venv.bat                        # Windows setup script
-├── setup-venv.sh                         # Linux/Mac setup script
-├── requirements.txt                      # Python dependencies
-├── LICENSE                               # MIT License
-└── README.md                             # This file
+│
+├── pyproject.toml                        # 🔧 Modern package configuration (PEP 517/518)
+├── setup.py                              # 🔧 Backward-compatible setup
+├── MANIFEST.in                           # 📦 Non-Python files to include
+├── .gitignore                            # 🚫 Git ignore rules
+├── requirements.txt                      # 📋 Production dependencies
+├── requirements-dev.txt                  # 📋 Development dependencies
+├── LICENSE                               # ⚖️ MIT License
+└── README.md                             # 📖 This file
 ```
 
 ---
@@ -671,14 +716,26 @@ Please report issues via [GitHub Issues](https://github.com/ChatchaiTritham/Edce
 
 ## Changelog
 
-### Version 1.0.0 (2026-02-14)
+### Version 1.0.0 (2026-02-15)
 
-- ✅ Initial release
+**🎉 Major Release - Standard Python Package Structure**
+
+- ✅ **Package Structure:** Converted to standard Python package (`edcellence`)
+- ✅ **PyPI Ready:** Added `pyproject.toml`, `setup.py`, `MANIFEST.in`
+- ✅ **Easy Installation:** `pip install git+https://github.com/...`
+- ✅ **Public API:** Clean imports `from edcellence import OrganizationalScorer`
+- ✅ **Version Management:** Centralized version info in `_version.py`
+- ✅ **Package Data:** Sample data included in package
+- ✅ **Enhanced Testing:** Added pytest fixtures and configuration
+- ✅ **Development Tools:** Added `requirements-dev.txt` with dev dependencies
+
+**Core Features:**
+
 - ✅ ADLI/LeTCI scoring algorithms
-- ✅ 38 publication-quality visualizations
+- ✅ 53 professional visualizations (28 PNG + 10 HTML + 15 manuscript)
 - ✅ 2 interactive Jupyter notebooks
-- ✅ 32 comprehensive unit tests
-- ✅ Empirical validation (n=24)
+- ✅ 32 comprehensive unit tests (96.9% pass rate)
+- ✅ Empirical validation (n=24 organizational units)
 - ✅ Complete documentation
 - ✅ IEEE ACCESS manuscript materials
 

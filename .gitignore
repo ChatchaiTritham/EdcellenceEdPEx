@@ -1,8 +1,12 @@
-# Python
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
+# C extensions
 *.so
+
+# Distribution / packaging
 .Python
 build/
 develop-eggs/
@@ -23,112 +27,98 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-# Virtual Environment
-venv/
-env/
-ENV/
-env.bak/
-venv.bak/
-.venv
+# PyInstaller
+*.manifest
+*.spec
 
-# PyCharm
-.idea/
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
 
-# VS Code
-.vscode/
-*.code-workspace
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
-# NOTE: Notebooks are now included in the repository for publication
-# *.ipynb
 
-# pytest
-.pytest_cache/
-.coverage
-htmlcov/
-.tox/
+# IPython
+profile_default/
+ipython_config.py
 
-# Node.js / React
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
-.pnpm-debug.log*
+# pyenv
+.python-version
 
-# Build outputs
-/build
-/dist
-/.next/
-/out/
+# pipenv
+Pipfile.lock
 
-# React / Next.js
-.DS_Store
-*.pem
-.env*.local
+# PEP 582
+__pypackages__/
 
-# Database
-*.db
-*.sqlite
-*.sqlite3
-/postgres_data/
-/mysql_data/
-
-# Environment variables
+# Environments
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+venv-*/
 
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+# Spyder project settings
+.spyderproject
+.spyproject
 
-# OS
-.DS_Store
-Thumbs.db
+# Rope project settings
+.ropeproject
 
-# IDE
-*.swp
-*.swo
-*~
+# mkdocs documentation
+/site
 
-# Backup files
-*.bak
-*.tmp
-*.temp
-
-# Sensitive data
-/data/real/
-/data/production/
-*.csv
-*.xlsx
-secrets/
-credentials/
-
-# Documentation build
-docs/_build/
-docs/.doctrees/
-
-# Coverage reports
-htmlcov/
-.coverage
-.coverage.*
-coverage/
-*.cover
-*.py,cover
-
-# Misc
-.cache/
+# mypy
 .mypy_cache/
 .dmypy.json
 dmypy.json
-.pytype/
-.prof
+
+# Pyre type checker
+.pyre/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Project specific
+outputs/*.png
+outputs/*.html
+
+# Keep README in outputs
+!outputs/README.md
+
+# Temporary files
+*.tmp
+*.bak
+*.orig

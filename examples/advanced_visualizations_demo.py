@@ -23,28 +23,23 @@ Usage:
     python examples/advanced_visualizations_demo.py
 """
 
-import sys
 import os
 import json
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Add src to path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
-
-from visualizations.advanced_visualizer import (
+# Import from edcellence package
+from edcellence.visualizations.advanced_visualizer import (
     AdvancedVisualizer,
     create_sample_hierarchical_data
 )
+from edcellence.data import get_sample_data_path
 
 
 def load_sample_data():
     """Load sample organizational data."""
-    data_path = os.path.join(
-        os.path.dirname(__file__), '..', 'data', 'sample', 'organizational_data.json'
-    )
-    with open(data_path, 'r', encoding='utf-8') as f:
+    with open(get_sample_data_path(), 'r', encoding='utf-8') as f:
         return json.load(f)
 
 
